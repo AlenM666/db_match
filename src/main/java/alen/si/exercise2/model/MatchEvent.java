@@ -16,7 +16,7 @@ public class MatchEvent {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private int matchId;
+    private String matchId;  // Change from int to String
     private int marketId;
     private int outcomeId;
     private String specifiers;
@@ -26,8 +26,8 @@ public class MatchEvent {
         this.dateInsert = Instant.now(); // Automatically set timestamp
     }
 
-    public MatchEvent(int matchId, int marketId, int outcomeId, String specifiers) {
-        this.matchId = matchId;
+    public MatchEvent(String matchId, int marketId, int outcomeId, String specifiers) {
+        this.matchId = matchId;  // Change to accept matchId as String
         this.marketId = marketId;
         this.outcomeId = outcomeId;
         this.specifiers = specifiers;

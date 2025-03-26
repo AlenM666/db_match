@@ -27,7 +27,9 @@ public class Exercise2Application implements CommandLineRunner{
     @Override
     public void run(String... args) throws Exception
     {
+
         String filePath = "src/main/resources/fo_random.txt";
         dataProcesService.processFile(filePath);
+
     }
 }
