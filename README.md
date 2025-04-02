@@ -69,12 +69,14 @@ This command will pull the MySQL Docker image, create a container, and set up th
 In the `application.properties` file, ensure the correct database settings are used:
 
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/match_data?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC
-spring.datasource.username=user
+spring.application.name=m_d-clone
+spring.datasource.url=jdbc:mysql://localhost:3306/match_data?useSSL=false&allowPublicKeyRetrieval=true
 spring.datasource.password=password
+spring.datasource.username=user
+spring.jpa.hibernate.ddl-auto=update
 spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
 spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
-spring.jpa.hibernate.ddl-auto=update
+
 spring.jpa.show-sql=true
 ```
 
